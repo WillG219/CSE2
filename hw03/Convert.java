@@ -15,7 +15,7 @@ public class Convert{
         System.out.print("Enter a measurement in meters in the form xx.xx: ");
         double Meters = myScanner.nextDouble();
         double Inches;
-        Inches = Meters * (39.3701);
+        Inches = ((Meters * (39.3701))*100)/100;
         System.out.println(Meters + " meters is " + Inches + " inches.");
     }
 }
