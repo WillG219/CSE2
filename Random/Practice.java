@@ -1,21 +1,15 @@
-//first compile the program
-//  javac Practice.java
-//run the program
-//  java Practice//
 
+import java.util.Scanner;
 public class Practice{
     public static void main(String[] args){
-        int var1 = 24;
-int var2 = 13;
-String word1 = "Crystal";
-
-if( var1 > var2 + 12){
-    String word2 = "palace";
-    if( var2 - 6 < var1 / 4 ){
-        word2 = "cave";
-    }
-}
-System.out.println(word1 + " " + word2);
-
+        Scanner myScanner = new Scanner( System.in );
+        System.out.println("Enter a number between 5 and 30: ");
+        int num = myScanner.nextInt();
+        for(int i = 1; i <= (num - 1); i++){
+            for(int j = 1; j <= (num - i); j++){
+                System.out.print((num - i));// this prints out the other numbers until (num - i) equals zero again. 
+            }
+            System.out.print("\n");
+        }
     }
 }
