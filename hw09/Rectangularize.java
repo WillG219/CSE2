@@ -3,6 +3,11 @@
 //CSE 2
 //HW 9
 //Program 2
+//This program will have two methods that both return 
+//void and have the same name. Except one method will accept int and 
+//the other will accept string. The int method will print out a square 
+//of % and the string method will print the string out the same number 
+//of times as there are characters in the string.
 
 import java.util.Scanner;
 public class Rectangularize{

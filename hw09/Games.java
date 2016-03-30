@@ -3,7 +3,7 @@
 //CSE 2
 //HW 9
 //Program 1
-
+//This program will give the user the choice of three mini games. 
 import java.util.Scanner;
 public class Games{
     
