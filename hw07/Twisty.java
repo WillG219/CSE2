@@ -33,30 +33,30 @@ public class Twisty{
             System.out.println("Please input an integer smaller than 80.");
             System.exit(1);
         }
-        for(int i = 0; i < width; i++){
-            for(int j = 0; j < length; j++){
-                for( int k = 0; k < i; k++){
+        for(int i = 0; i < width; i++){//Outer for loop
+            for(int j = 0; j < length; j++){//inner for loop 
+                for( int k = 0; k < i; k++){//the spacing
                     System.out.print(" ");
                     j++;
                 }
                 System.out.print("#");
                 j++;
-                for(int k = (width - i); k > 1; k--) {
+                for(int k = (width - i); k > 1; k--) {//prints the spacing 
                     System.out.print(" ");
                     j++;
                 }
-                for(int k = (width - i); k > 1; k--) {
+                for(int k = (width - i); k > 1; k--) {//prints the spacing to arrange the pattern properly
                     System.out.print(" ");
                     j++;
                 }
                 System.out.print("#");
                 for(int k = 0; k < i; k++) {
-                    System.out.print(" ");
+                    System.out.print(" ");//for the spacing to keep arranging the pattern
                     j++;
                 }
             }
             System.out.println();
         }
     }
-}
+}//I could not figure out how to incorporate the backslashes 
         
