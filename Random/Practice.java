@@ -2,14 +2,26 @@
 import java.util.Scanner;
 public class Practice{
     public static void main(String[] args){
-        Scanner myScanner = new Scanner( System.in );
-        System.out.println("Enter a number between 5 and 30: ");
-        int num = myScanner.nextInt();
-        for(int i = 1; i <= (num - 1); i++){
-            for(int j = 1; j <= (num - i); j++){
-                System.out.print((num - i));// this prints out the other numbers until (num - i) equals zero again. 
-            }
-            System.out.print("\n");
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter a number between 1 and 5");
+        int number = input.nextInt();    
+
+        System.out.println("Now enter " + number +  " names");    
+        //NOTE:  You may want to remove this line since it will mess up your data.
+        //String names = input.next();
+
+        String[] nameList = new String[number];
+
+        for(int i = 0; i < number; i++){
+            nameList[i] = input.next();
+        }
+
+        //print separate here.
+        System.out.println("Here are the names you entered:  ");
+        for(int i = 0; i<number; i++){
+            System.out.println(nameList[i]);
         }
     }
-}
+} 
