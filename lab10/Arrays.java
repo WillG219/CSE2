@@ -11,13 +11,17 @@ public class Arrays{
         int x = ((int)(Math.random()*5)+5);
         System.out.println("Enter " + x + " student names: ");
         String[] names = new String [x];
-        for(int i = 0; i < x; i++){
+        for(int i = 0; i < names.length; i++){
             names[i] = scan.nextLine();
         }
-        int y = ((int)(Math.random()*100));
-        int[] midterm = new int [y];
         
+        int[] midterm = new int [x];
         
+        for(int i = 0; i < x; i++){
+            midterm[i] = (int)(Math.random()*100);
+        System.out.println(names[i] + ": " + midterm[i]);
+        
+        } 
     }
 }
     
