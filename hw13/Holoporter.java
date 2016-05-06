@@ -6,13 +6,26 @@ import java.util.Scanner;
 
 public class Holoporter{
     public static void main(String[] args){
-     String [][][] array = SoRandom();   
+     String [][][] array = SoRandom();
+     String [][][] array2 = SoRandom();
+     
+     for(int i = 0; i < array.length; i++){
+         for(int j = 0; j < array[i].length; j++){
+             for(int k = 0; k < array[i][j].length; k++){
+                 array[i][j][k] = coder();
+             }
+         }
+     }
+     print(array);
+     //I could not figure out how to connect all the methods together. 
+    
+     
     }//End of Main Method
     
     public static String [][][] soRandom(){
-        int RanLen = (int)(Math.random() * 9);
-        int RanLen2 = (int)(Math.random() * 9);
-        int RanLen3 = (int)(Math.random() * 9);
+        int RanLen = (int)(Math.random()* 9);
+        int RanLen2 = (int)(Math.random()* 9);
+        int RanLen3 = (int)(Math.random()* 9);
         String [][][] Rando = new String[RanLen][][];
         for(int i = 0; i < RanLen; i++){
             Rando[i] = new String[RanLen2][];
@@ -26,12 +39,12 @@ public class Holoporter{
         String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String ret = "";
         for (int i = 0; i < 2; i++){
-            int rand = (Math.random() * 25);
+            int rand = (Math.random()* 25);
             ret = ret + letters.substring(rand, rand + 1);
         }
         String numbers = "0123456789";
         for (int i = 0; i < 4; i++){
-            int rand = (Math.random() * 9);
+            int rand = (Math.random()* 9);
             ret = ret + numbers.substring(rand, rand + 1);
         }
         return ret;
@@ -71,7 +84,7 @@ public class Holoporter{
                 for(int k = 1; k < mainArray[i][j].length; k++){
                       x = k;
                       while(mainArray[i][j][x].compareTo(mainArray[i][j][x - 1]) < 0){
-                        String temp = mainArray[i][j][pointer - 1];
+                        String temp = mainArray[i][j][x - 1];
                          mainArray[i][j][x - 1] = mainArray[i][j][x];
                         mainArray[i][j][x] = temp;
                         x--;
@@ -125,5 +138,17 @@ public static String percentage(String[][][] array, String[][][] array2){
         double percent = num * 100;
         System.out.print("Percentage: " + ((int)(percent*100) / 100.00) + "%");
     }//End of percentage
-
+    
+    public static String[][][] print(String[][][] array){
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+                for(int k = 0; k < array[i][j].length; k++){
+                    System.out.print(array[i][j] + ", ");
+        }
+        System.out.print(array[i] + "|");
+    }
+    System.out.println(array + "--");
+        }
+        return array;
+    }//end of print
 }//End of Class    
